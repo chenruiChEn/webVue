@@ -1,0 +1,97 @@
+//英练帮WEB端视觉规范
+
+//主色   主色调、导航、标题、线条、按钮、链接、hover效果等
+@icoachuColor:#ff5c34;
+@icoachuColor2:#fc9a28;
+
+
+
+
+//#####辅助色 辅助色、大标题、重要信息等
+@icoachuAuxiliaryColor01: #222;
+
+//辅助色 辅助色、大标题、重要信息等
+@icoachuAuxiliaryColor02: #444;
+
+//辅助色、副标题、次重要信息、提示文案等
+@icoachuAuxiliaryColor03: #888;
+
+//辅助色、较弱文字、提示文案等
+@icoachuAuxiliaryColor04: #aaa;
+
+//辅助色、线条、按钮边框
+@icoachuAuxiliaryColor05: #ddd;
+
+
+
+//#####背景色
+@icoachuBackground1:#f2f2f2;    //辅助色、表格title背景色
+
+@icoachuBackground2:#f0f0f0;    //辅助色、背景色
+
+
+
+
+//###课程标签颜色  classType   0:一对一   1:小班课  2:大班课  3:陪练课
+//一对一
+@icoachuCourseSgin0: #6d92ff;
+
+//小班课
+@icoachuCourseSgin1: #ff6d96;
+
+//大班课
+@icoachuCourseSgin2: #ffc258;
+
+//陪练课
+@icoachuCourseSgin3: #6d92ff;
+
+
+
+//##########按钮样式
+.icoachuBtn01{      //确认按钮
+  box-sizing: border-box;
+  color: #fff;
+  background-color: @icoachuColor2;
+  &:hover{
+    background-color: #fdac4e;
+  }
+  &:active{
+    background-color: #fc8f11;
+  }
+  &.deable{   //禁用
+    background-color: #ffdfba;
+  }
+}
+
+.icoachuBtn02{    //取消按钮
+  box-sizing: border-box;
+  border: 1px solid @icoachuColor2;
+  color: @icoachuColor2;
+  background-color: #fff;
+  &:hover{
+    background-color: #fff9f0;
+  }
+  &:active{
+    background-color: #ffa720;
+    color: #fff;
+    border: 1px solid #ffa720;
+  }
+  &.deable{   //禁用
+    background-color: @icoachuAuxiliaryColor05;
+    color: #fff;
+    border: 1px solid @icoachuAuxiliaryColor05;
+  }
+}
+
+
+//样式函数
+.Size(@width:100%,@height:100%,@hg:normal){
+  width:@width;
+  height:@height;
+  line-height:@hg;
+}
+
+.Font(@size:14px,@color:#fff){
+  font-size: @size;
+  color: @color;
+}
