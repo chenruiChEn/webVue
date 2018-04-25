@@ -1,37 +1,17 @@
 <template>
-  <div id="app">
-    <router-view/>
-    <p>{{count}}</p>
-    <p>
-      <button @click="increment">+</button>
-      <button @click="decrement">-</button>
-    </p>
-
-    <div>
-
-      <el-input v-model="input" placeholder="请输入内容"></el-input>
-      <p>{{$t("hello")}}</p>
-      <button @click="toggle">切换语言</button>
-      <el-transfer v-model="value1" :data="data"></el-transfer>
-      <el-table
-        :data="tableData"
-        style="width: 100%">
-        <el-table-column
-          prop="date"
-          label="日期"
-          width="180">
-        </el-table-column>
-        <el-table-column
-          prop="name"
-          label="姓名"
-          width="180">
-        </el-table-column>
-        <el-table-column
-          prop="address"
-          label="地址">
-        </el-table-column>
-      </el-table>
-    </div>
+  <div id="app"  v-title data-title="标题内容">
+    <el-container>
+      <el-header >
+        <div style="height: 40px;width: 100%;">fasdf</div>
+        <div style="height: 80px;width: 100%;">fasdf</div>
+      </el-header>
+      <el-main>
+        <router-view/>
+      </el-main>
+      <el-footer>
+        
+      </el-footer>
+    </el-container>
   </div>
 </template>
 
@@ -39,13 +19,18 @@
 
 export default {
   name: 'App',
-  data:{
-
+  data(){
+    return {
+      input:'fsdfs',
+      tableData:[],
+    }
   },
   computed:{
     count(){
       return this.$store.state.count
-//      return 0
+    },
+    isLogin(){
+      return this.$store.state.isLogin
     }
   },
   methods:{
@@ -56,7 +41,7 @@ export default {
       this.$store.commit('decrement')
     },
     toggle(){
-      this.$i18n.locale = this.$i18n.locale=='zh'?'en':'zh';
+      this.$i18n.locale = this.$i18n.locale=='cn'?'en':'cn';
     }
   },
   beforeCreate: function () {  //创建前状态
@@ -88,12 +73,13 @@ export default {
 
 <style lang="less">
   @import "style/commen";
-#app {
-  width: 800px;
-  margin:0 auto;
-  div{
-    padding-top:60px;
-    color: @icoachuColor;
+  .el-header{
+    min-height: 80px;
   }
-}
+  .el-main{
+    width: 1200px;
+    margin: 15px auto;
+    padding: 0;
+    display: flex;
+  }
 </style>

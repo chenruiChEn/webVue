@@ -4,5 +4,8 @@ export default {
   },
   decrement(state){
     state.count--
+  },
+  login(state){
+    state.isLogin = true
   }
 }

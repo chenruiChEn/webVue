@@ -1,16 +1,18 @@
-import  zh from './zh'
+import  cn from './cn'
 import  en from './en'
 import VueI18n from 'vue-i18n'
-import Vue from 'vue'
 import locale from 'element-ui/lib/locale';
+import Vue from 'vue'
 Vue.use(VueI18n)
 
-
-export default new VueI18n({
+const i18n = new VueI18n({
   locale: 'en', // 语言标识
   messages:{
-    zh,
+    cn,
     en
   }
 })
 
+locale.i18n((key, value) => i18n.t(key, value))
+
+export default i18n
