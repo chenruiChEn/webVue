@@ -1,7 +1,6 @@
-console.log(process.env.NODE_ENV);
-
 
 let obj = {}, node_env = process.env.NODE_ENV;
+
 
 if(node_env==="production"){
   obj.teacherUrl = 'http://ylb.icoachu.cn:18081/coachTechWeb/'

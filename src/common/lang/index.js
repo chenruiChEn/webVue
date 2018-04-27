@@ -5,6 +5,8 @@ import enLocale from 'element-ui/lib/locale/lang/en'
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 import Vue from 'vue'
 import {titleCn,titleEn} from './title.js'   //页面title标签文案
+import en from './en.js'   //页面title标签文案
+import cn from './cn.js'   //页面title标签文案
 Vue.use(VueI18n)
 
 
@@ -15,10 +17,12 @@ const i18n = new VueI18n({
     cn:{
       ...zhLocale,
       ...titleCn,
+      ...cn,
     },
     en:{
       ...enLocale,
       ...titleEn,
+      ...en,
     },
   }
 })

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '@/components/index'
+import personal from '@/components/personal'
 import vBindTitle from '@/components/vBindTitle'
 
 
@@ -10,8 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'logon',
-      component: index
+      name: 'personalTitle',
+      component: personal
     },
     {
       path: '/vBindTitle',

@@ -11,7 +11,7 @@ import './style/base.less'
 
 
 import {
-  // Pagination,
+   Pagination,
   // Dialog,
   // Autocomplete,
   // Dropdown,
@@ -23,7 +23,7 @@ import {
   // MenuItemGroup,
   Input,
   // InputNumber,
-  // Radio,
+  Radio,
   // RadioGroup,
   // RadioButton,
   Checkbox,
@@ -69,18 +69,13 @@ import {
   // Cascader,
   // ColorPicker,
   // Transfer,
-  Container,
-  Header,
-  // Aside,
-  Main,
-  Footer,
   Loading,
   MessageBox,
   Message,
   Notification
 } from 'element-ui';
 
-// Vue.use(Pagination.name,Pagination);
+Vue.use(Pagination);
 // Vue.use(Dialog.name,Dialog);
 // Vue.use(Autocomplete);
 // Vue.use(Dropdown);
@@ -91,7 +86,7 @@ import {
 // Vue.use(MenuItem);
 // Vue.use(MenuItemGroup);
 // Vue.use(InputNumber);
-// Vue.use(Radio);
+Vue.use(Radio);
 // Vue.use(RadioGroup);
 // Vue.use(RadioButton);
 Vue.use(Checkbox);
@@ -140,10 +135,7 @@ Vue.use(TableColumn);
 Vue.use(Input);
 Vue.use(Tabs);
 Vue.use(Loading.directive);
-Vue.use(Container);
-Vue.use(Header);
-Vue.use(Main);
-Vue.use(Footer);
+
 
 Vue.prototype.$loading = Loading.service;
 Vue.prototype.$msgbox = MessageBox;
@@ -164,6 +156,13 @@ var mixin = {
       this.$i18n.locale = this.$i18n.locale=='cn'?'en':'cn';
       document.title = this.title
       this.$store.commit('changeLang')
+    },
+    toLogin(){
+      if(this.lang === 'cn'){
+        window.location = 'http://www.icoachu.cn'
+      }else {
+        window.location = 'http://en.icoachu.cn'
+      }
     }
   },
   computed:{
@@ -173,6 +172,9 @@ var mixin = {
     lang(){   //全局 title 语言环境字段
      return this.$store.state.lang
     },
+    proType(){
+      return this.$store.state.proType
+    }
   },
 
 }

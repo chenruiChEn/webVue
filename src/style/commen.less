@@ -4,6 +4,21 @@
 @icoachuColor:#ff5c34;
 @icoachuColor2:#fc9a28;
 
+.F14{
+  font-size: 14px;
+}
+.F16{
+  font-size: 16px;
+}
+.F15{
+  font-size: 15px;
+}
+.F18{
+  font-size: 18px;
+}
+.F20{
+  font-size: 20px;
+}
 
 
 
@@ -46,12 +61,22 @@
 @icoachuCourseSgin3: #6d92ff;
 
 
+.bordor_radus {
+  border-radius: 8px;
+}
+
 
 //##########按钮样式
 .icoachuBtn01{      //确认按钮
   box-sizing: border-box;
   color: #fff;
   background-color: @icoachuColor2;
+  border-radius: 8px;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
   &:hover{
     background-color: #fdac4e;
   }
@@ -64,10 +89,16 @@
 }
 
 .icoachuBtn02{    //取消按钮
+  text-align: center;
   box-sizing: border-box;
   border: 1px solid @icoachuColor2;
   color: @icoachuColor2;
   background-color: #fff;
+  border-radius: 8px;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
   &:hover{
     background-color: #fff9f0;
   }
@@ -94,4 +125,9 @@
 .Font(@size:14px,@color:#fff){
   font-size: @size;
   color: @color;
+}
+
+.W1200m0auto(@m1:0,@m2:auto){
+  width: 1200px;
+  margin: @m1 @m2;
 }
