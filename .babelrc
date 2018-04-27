@@ -25,6 +25,7 @@
           "styleLibraryName": "theme-chalk"
         }
       ]]
-    }
+    },
+    "plugins": ["remove-webpack"]
   }
 }

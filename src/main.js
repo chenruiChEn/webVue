@@ -6,6 +6,9 @@ import router from './router'
 import 'es6-promise/auto'
 import 'element-ui/lib/theme-chalk/index.css';
 import i18n from './common/lang/index'
+import store from './store/index.js'
+import './style/base.less'
+
 
 import {
   // Pagination,
@@ -91,7 +94,7 @@ import {
 // Vue.use(Radio);
 // Vue.use(RadioGroup);
 // Vue.use(RadioButton);
-// Vue.use(Checkbox);
+Vue.use(Checkbox);
 // Vue.use(CheckboxButton);
 // Vue.use(CheckboxGroup);
 // Vue.use(Switch);
@@ -151,26 +154,50 @@ Vue.prototype.$notify = Notification;
 Vue.prototype.$message = Message;
 
 
-import store from './store/index.js'
+var mixin = {
+  data(){
+    return {
+    }
+  },
+  methods: {
+    toggle(){  //全局 切换语言环境方法
+      this.$i18n.locale = this.$i18n.locale=='cn'?'en':'cn';
+      document.title = this.title
+      this.$store.commit('changeLang')
+    }
+  },
+  computed:{
+    title(){  //全局 title 字段
+      return this.$t(this.$route.name)
+    },
+    lang(){   //全局 title 语言环境字段
+     return this.$store.state.lang
+    },
+  },
 
-import './style/base.less'
+}
+
+
 
 Vue.config.productionTip = true
 
 
 Vue.directive('title', {
   inserted: function (el, binding) {
+    // console.log(el.dataset.r);
+    // console.log(binding);
     document.title = el.dataset.title
   }
 })
 
-
+Vue.mixin(mixin)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
   i18n,
+
   components: { App },
   template: '<App/>'
 })

@@ -7,5 +7,8 @@ export default {
   },
   login(state){
     state.isLogin = true
+  },
+  changeLang(state){
+    state.lang = state.lang == 'cn'?'en':'cn';
   }
 }

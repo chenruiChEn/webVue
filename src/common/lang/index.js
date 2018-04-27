@@ -1,15 +1,25 @@
-import  cn from './cn'
-import  en from './en'
+
 import VueI18n from 'vue-i18n'
 import locale from 'element-ui/lib/locale';
+import enLocale from 'element-ui/lib/locale/lang/en'
+import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 import Vue from 'vue'
+import {titleCn,titleEn} from './title.js'   //页面title标签文案
 Vue.use(VueI18n)
 
+
+
 const i18n = new VueI18n({
-  locale: 'en', // 语言标识
+  locale: 'cn', // 语言标识
   messages:{
-    cn,
-    en
+    cn:{
+      ...zhLocale,
+      ...titleCn,
+    },
+    en:{
+      ...enLocale,
+      ...titleEn,
+    },
   }
 })
 

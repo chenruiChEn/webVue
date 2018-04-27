@@ -10,12 +10,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
+      name: 'logon',
       component: index
     },
     {
       path: '/vBindTitle',
-      name: 'vBindTitle',
+      name: 'logon',
       component: vBindTitle
     }
   ]

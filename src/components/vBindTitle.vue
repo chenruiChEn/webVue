@@ -14,7 +14,11 @@
             return {
                 msg: 'Welcome to Your myVue'
             }
-        }
+        },
+      mounted: function () {  //挂载结束状态
+        console.log(this);
+        console.log(this.$route.name);
+      },
     }
 </script>
 
