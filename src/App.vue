@@ -28,12 +28,8 @@
       </div>
 
       <div class="el-main">
-
-
-
         <!--路由站位-->
         <router-view/>
-
       </div>
 
       <!--底部-->

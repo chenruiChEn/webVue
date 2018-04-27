@@ -1,6 +1,10 @@
 <template>
-  <!--<router-link v-bind:to="item.routeName">{{item.name}}</router-link>-->
-  <Aside></Aside>
+
+  <div   v-title :data-title="title">
+    <Aside></Aside>
+
+
+  </div>
 </template>
 
 <script>
