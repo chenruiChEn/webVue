@@ -1,14 +1,17 @@
 <template>
 
-  <div   v-title :data-title="title">
-    <Aside></Aside>
+  <div class="personalPage MainBox"  v-title :data-title="title">
+      <div class="main">
 
+      </div>
+      <div class="newsCenter">
 
+      </div>
   </div>
 </template>
 
 <script>
-  import  Aside from "@/components/Aside"
+
   export default {
     name: 'personal',
     data() {
@@ -16,7 +19,7 @@
     },
     computed: {},
     methods: {},
-    components: { Aside },
+    components: {  },
     beforeCreate: function () {  //创建前状态
 
 
@@ -46,6 +49,20 @@
 </script>
 
 <style lang="less">
+  @import "../style/commen";
+.personalPage{
 
+  .newsCenter{
+    width: 270px;
+    margin-left: 15px;
+    height: 100%  ;
+    background-color: #fff;
+  }
+  .main{
+    flex: 1;
+    height: 100%;
+    background-color: #fff;
+  }
+}
 
 </style>

@@ -12,7 +12,7 @@ module.exports = {
     logon: '登录',
     icoachu:'英练帮',
     langBtn:"English",
-    Copyright:'Copyright©武汉练帮科技有限公司          鄂ICP备16018565号-1',
+    Copyright:'Copyright©武汉练帮科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鄂ICP备16018565号-1',
     personalTitle:'老师中心',
   }
 }

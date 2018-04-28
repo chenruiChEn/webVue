@@ -1,5 +1,5 @@
 <template>
-    <div   :id="lang"  v-title :data-title="title">
+    <div   :id="lang" :class="proType"  v-title :data-title="title">
 
       <!--头部-->
       <div class='el-header' >
@@ -28,13 +28,14 @@
       </div>
 
       <div class="el-main">
+        <Aside></Aside>
         <!--路由站位-->
         <router-view/>
       </div>
 
       <!--底部-->
       <div class="el-footer">
-          <div class="flootBox">{{$t('Copyright')}}</div>
+          <div class="flootBox" v-html="$t('Copyright')"></div>
       </div>
 
     </div>
@@ -42,80 +43,13 @@
 </template>
 
 <script>
+  import  Aside from "@/components/Aside"
 
 export default {
   name: 'App',
   data(){
     return {
-      input:'fsdfs',
-        tableList:{
-            loading:false,
-            list:[
-                {
-                    id:'1',
-                    plaChargeMainNum: 1201,
-                    chaStuName: '小李',
-                    chaClaName: '一班',
-                    createDate:'2012-12-22',
-                    chaMoney: 22,
-                    tag:'家'
-                },
-                {
-                    id:'2',
-                    plaChargeMainNum: 1201,
-                    chaStuName: '小李',
-                    chaClaName: '一班',
-                    createDate:'2012-12-22',
-                    chaMoney: 22,
-                    tag:'公司'
-                }
-            ],
-            columns: [
-                {
-                    prop: 'plaChargeMainNum',
-                    label: '单号',
-                    width: '200'
-                },
-                {
-                    prop: 'tag',
-                    label: '类型',
-                    width: '120',
-                    filters:[{ text: '家', value: '家' }, { text: '公司', value: '公司' }],
-                    filterMethod: this.filterTag,
-                    filterPlacement:"bottom-end"
-                },
-                {
-                    prop: 'chaStuName',
-                    label: '学生'
-                },
-                {
-                    prop: 'chaClaName',
-                    label: '班级'
-                },
-                {
-                    prop: 'createDate',
-                    label: '日期',
-                    // formatter: (r, b) => this.mixin_table_formatDate(r, '-')
-                },
-                {
-                    prop: 'chaMoney',
-                    label: '金额',
-                    slotName: 'money-slot'//此处需要注意，此字段是新增属性，后边做详细解释
-                }
-            ],
-            pagination: {
-                page:1,
-                pageSize: 10,
-                total: 20
-            },
-            options: {
-                border: true,
-                checkbox: true,
-                radio: false,
-                radioSelect: '1',
-                selectionWidth:'55'
-            }
-        }
+
     }
   },
   computed:{
@@ -136,7 +70,7 @@ export default {
 
 
   },
-    components:{  },
+  components: { Aside },
   beforeCreate: function () {  //创建前状态
     console.log(this.$route.name);
 

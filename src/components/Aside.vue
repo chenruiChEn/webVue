@@ -166,6 +166,11 @@
   background-color: #fff;
   width: 200px;
   overflow: hidden;
+  /*position: absolute;*/
+  /*left: 0;*/
+  /*top: 0;*/
+  min-height: 996px;
+  margin-right: 15px;
   h2,h3,li{
     height: 30px;
     line-height: 30px;

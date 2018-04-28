@@ -29,10 +29,10 @@
 </template>
 
 <script>
-  import DataTable from "@/components/dataTable";
+  import DataTable from "@/components/DataTable";
 
   export default {
-        name: 'HelloWorld',
+        name: 'dataTables',
         data() {
             return {
                 msg: 'Welcome to Your myVue',

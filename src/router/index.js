@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import personal from '@/components/personal'
-import vBindTitle from '@/components/vBindTitle'
+import personal from '@/view/personal'
+import dataTables from '@/view/dataTables'
 
 
 Vue.use(Router)
@@ -14,9 +14,9 @@ export default new Router({
       component: personal
     },
     {
-      path: '/vBindTitle',
-      name: 'logon',
-      component: vBindTitle
-    }
+      path: '/',
+      name: 'personalTitle',
+      component: dataTables
+    },
   ]
 })
