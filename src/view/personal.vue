@@ -1,7 +1,8 @@
 <template>
 
-  <div class="personalPage MainBox"  v-title :data-title="title">
+  <div class="personalPage MainBox"  v-title :data-title="icoachuTitle">
       <div class="main">
+        <PageTitle :text="titles"></PageTitle>
 
       </div>
       <div class="newsCenter">
@@ -11,15 +12,18 @@
 </template>
 
 <script>
+  import PageTitle from '@/components/PageTitle'
 
   export default {
     name: 'personal',
     data() {
-      return {}
+      return {
+        titles:'hfhfgh'
+      }
     },
     computed: {},
     methods: {},
-    components: {  },
+    components: { PageTitle },
     beforeCreate: function () {  //创建前状态
 
 
@@ -51,7 +55,7 @@
 <style lang="less">
   @import "../style/commen";
 .personalPage{
-
+  display: flex;
   .newsCenter{
     width: 270px;
     margin-left: 15px;

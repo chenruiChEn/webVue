@@ -1,5 +1,5 @@
 <template>
-    <div   :id="lang" :class="proType"  v-title :data-title="title">
+    <div   :id="icoachuLang" :class="proType"  v-title :data-title="icoachuTitle">
 
       <!--头部-->
       <div class='el-header' >
@@ -53,36 +53,26 @@ export default {
     }
   },
   computed:{
-    count(){
-      return this.$store.state.count
-    },
+
     isLogin(){
       return this.$store.state.isLogin
     },
   },
   methods:{
-    increment(){
-      this.$store.commit('increment')
-    },
-    decrement(){
-      this.$store.commit('decrement')
-    },
-
 
   },
   components: { Aside },
   beforeCreate: function () {  //创建前状态
-    console.log(this.$route.name);
 
   },
   created: function () {  //创建完毕状态
-    console.log(this);
+
   },
   beforeMount: function () {  //挂载前状态
 
   },
   mounted: function () {  //挂载结束状态
-      console.log(process.env.NODE_ENV);
+
   },
   beforeUpdate: function () {  //更新前状态
 

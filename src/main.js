@@ -154,11 +154,11 @@ var mixin = {
   methods: {
     toggle(){  //全局 切换语言环境方法
       this.$i18n.locale = this.$i18n.locale=='cn'?'en':'cn';
-      document.title = this.title
+      document.title = this.icoachuTitle
       this.$store.commit('changeLang')
     },
     toLogin(){
-      if(this.lang === 'cn'){
+      if(this.icoachuLang === 'cn'){
         window.location = 'http://www.icoachu.cn'
       }else {
         window.location = 'http://en.icoachu.cn'
@@ -166,13 +166,13 @@ var mixin = {
     }
   },
   computed:{
-    title(){  //全局 title 字段
+    icoachuTitle(){  //全局 icoachuTitle 字段
       return this.$t(this.$route.name)
     },
-    lang(){   //全局 title 语言环境字段
+    icoachuLang(){   //全局 icoachuLang lang 语言环境字段
      return this.$store.state.lang
     },
-    proType(){
+    proType(){    //全局 proType 环境字段
       return this.$store.state.proType
     }
   },
@@ -186,8 +186,7 @@ Vue.config.productionTip = true
 
 Vue.directive('title', {
   inserted: function (el, binding) {
-    // console.log(el.dataset.r);
-    // console.log(binding);
+    console.log(el.dataset);
     document.title = el.dataset.title
   }
 })

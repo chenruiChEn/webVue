@@ -1,7 +1,7 @@
 <template>
       <div class="Aside">
         <h2>
-          <router-link  to="../personal-center/personal-center.html">
+          <router-link  to="/">
             <i class="iou-icon_user nav-icon-0"></i>
             <!--Personal Page-->{{$t('icoachu5')}}
           </router-link>
@@ -12,7 +12,7 @@
         </h3>
         <ul>
           <li>
-            <router-link to="../course-manage/my-schedules.html">
+            <router-link to="/myClassSchedule">
               <!--My Class Schedule-->{{$t('icoachu7')}}
             </router-link>
           </li>
