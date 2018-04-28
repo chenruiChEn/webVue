@@ -166,9 +166,6 @@
   background-color: #fff;
   width: 200px;
   overflow: hidden;
-  /*position: absolute;*/
-  /*left: 0;*/
-  /*top: 0;*/
   min-height: 996px;
   margin-right: 15px;
   h2,h3,li{
@@ -234,12 +231,11 @@
     border-left: 3px solid #fff;
     transition: border-left-color 1s ease-in-out 0s;
     padding-left: 80px;
-    &:hover{
+    &:hover,&.router-link-exact-active{   //左侧导航栏 标记样式
       border-left: 3px solid @icoachuColor2;
     }
-    &.router-link-active{
-      border-left: 3px solid @icoachuColor2;
-    }
+
+
   }
   .helpCenter{
     width: 180px;
@@ -249,6 +245,7 @@
     background: url("../style/image/icon/serviceCn.png.png") no-repeat center;
   }
 }
+
   #en {
     .Aside{
       .helpCenter{

@@ -24,6 +24,7 @@ let obj ={
     "icoachu23": "资料管理",
     "icoachu24": "修改密码",
     "icoachu25": "机构",
-    "icoachu26": "机构管理"
+    "icoachu26": "机构管理",
+    "icoachu27": "回到今天"
 }
       ;if(typeof module !== 'undefined' && typeof module.exports !== "undefined"){   module.exports = obj }else { if(typeof define === "function" && define.amd){  define([],function () {return obj}) }else { window.obj = obj }}

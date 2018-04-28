@@ -2,7 +2,7 @@
 
   <div class="personalPage MainBox"  v-title :data-title="icoachuTitle">
       <div class="main">
-        <PageTitle :text="titles"></PageTitle>
+
 
       </div>
       <div class="newsCenter">
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import PageTitle from '@/components/PageTitle'
+
 
   export default {
     name: 'personal',
@@ -23,13 +23,13 @@
     },
     computed: {},
     methods: {},
-    components: { PageTitle },
+    components: {  },
     beforeCreate: function () {  //创建前状态
 
 
     },
     created: function () {  //创建完毕状态
-      console.log(this);
+      console.log(this._i18n);
     },
     beforeMount: function () {  //挂载前状态
 
