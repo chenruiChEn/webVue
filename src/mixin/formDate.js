@@ -1,7 +1,5 @@
 function timeHtml(time,str){
-  time = time || new Date().getTime();
-  time=new Date(time).getTime()+new Date(time).getTimezoneOffset() * 60000+3600000 * 8;
-  var date = new Date(time);
+  var date = $newDate(time);
   Y = date.getFullYear() + '-';
   M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
   _M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '/';

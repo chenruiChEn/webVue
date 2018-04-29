@@ -27,7 +27,16 @@ Vue.directive('title', {
   }
 })
 
-
+window.$newDate = function (time,month,day) {
+  if(time&&month){
+    day = day || 0;
+    time =  new Date(time,month,day).getTime();
+  }else {
+    time = time || new Date().getTime();
+  }
+  time = new Date(time).getTime()+new Date(time).getTimezoneOffset() * 60000+3600000 * 8;   //格式化时间为北京时间
+  return new Date(time);
+}
 
 
 import {

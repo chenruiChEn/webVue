@@ -9,8 +9,8 @@
               <ul>
                 <li class="user"><span class="user-name">wr234werw <em class="el-icon-arrow-down"></em></span>
                   <ul class="user-info tin5-h">
-                    <li><a href="../personal-set/datum-manage.html">账号信息</a></li>
-                    <li><a href="../personal-set/update-password.html">修改密码</a></li>
+                    <li><router-link to="/">账号信息</router-link></li>
+                    <li><router-link to="/">修改密码</router-link></li>
                   </ul>
                 </li>
                 <li class="exit">退出登录</li>

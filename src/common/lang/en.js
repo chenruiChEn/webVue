@@ -25,6 +25,9 @@ let obj ={
     "icoachu24": "Change Password",
     "icoachu25": "Organization",
     "icoachu26": "Organization Control",
-    "icoachu27": "To Today"
+    "icoachu27": "To Today",
+    "icoachu28": "Class schedule is set on Beijing Time",
+    "icoachu29": "Class for Today",
+    "icoachu30": "Class Conducted"
 }
       ;if(typeof module !== 'undefined' && typeof module.exports !== "undefined"){   module.exports = obj }else { if(typeof define === "function" && define.amd){  define([],function () {return obj}) }else { window.obj = obj }}

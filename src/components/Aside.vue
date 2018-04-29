@@ -177,8 +177,22 @@
   h2{
     margin: 30px 0 ;
     text-align: center;
+    color: @icoachuAuxiliaryColor02 ;.F16;
     a{
       padding-left: 0;
+      vertical-align: middle;
+
+      i{
+        margin-top: 8px;
+        margin-right: 10px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url("../style/image/icon/icoachu_teacher_sprite.png") -114px -140px;
+      }
+      &.router-link-exact-active i{
+        background: url("../style/image/icon/icon_user.png") no-repeat center;
+      }
     }
   }
   h3{
@@ -254,7 +268,9 @@
       a{
         padding-left: 40px;
       }
-      h2 a{padding-left: 0;}
+      h2 a{
+        padding-left: 0;
+      }
       h3{
         padding-left: 38px;
         >i{

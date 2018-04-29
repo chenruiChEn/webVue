@@ -25,6 +25,9 @@ let obj ={
     "icoachu24": "修改密码",
     "icoachu25": "机构",
     "icoachu26": "机构管理",
-    "icoachu27": "回到今天"
+    "icoachu27": "回到今天",
+    "icoachu28": "所有时间均按“北京时间”东八时区显示",
+    "icoachu29": "表示当天有课",
+    "icoachu30": "表示历史课表"
 }
       ;if(typeof module !== 'undefined' && typeof module.exports !== "undefined"){   module.exports = obj }else { if(typeof define === "function" && define.amd){  define([],function () {return obj}) }else { window.obj = obj }}
